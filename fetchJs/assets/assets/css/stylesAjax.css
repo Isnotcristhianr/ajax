@@ -1,0 +1,13 @@
+body{
+    background-color: black;
+    color: aliceblue;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    position: center;
+}
+
+table thead{
+    background-color: #4c5caf;
+    color: white;
+    position: center;
+}

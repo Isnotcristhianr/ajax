@@ -1,0 +1,32 @@
+<html lang="es">
+
+<!--Envio de js invocar-->
+<script src="assets/js/est.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica JS Recalde Cristhian</title>
+</head>
+
+<body>
+    <h2>JavaScript Class</h2>
+    <p>Bienvenidos</p>
+
+    <p id="demo"> </p>
+
+    <script>
+        let resp = "";
+        let e = window.prompt("Ingrese su edad: ");
+        let ced = window.prompt("Ingrese su cedula: ");
+
+        const miEst = new est(e, ced);
+        document.getElementById("demo").innerHTML = miEst.ingresar();
+
+        miEst.evaCedula();
+    </script>
+
+</body>
+
+</html>

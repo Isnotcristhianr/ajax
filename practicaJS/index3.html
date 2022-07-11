@@ -1,0 +1,147 @@
+<html lang="es">
+
+
+<!--css-->
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/botones.css">
+<!--Envio de js invocar-->
+<script src="assets/js/est.js"></script>
+<script src="assets/js/funciones.js"></script>
+<script src="assets/js/jQueryv3.6.0.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica JS Recalde Cristhian</title>
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!--Importar FontSizeG-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h2>JavaScript Class</h2>
+    <p>Bienvenidos</p>
+
+    <br>
+    <label>Num de cedula: </label>
+    <input type="text" id="ced" value="1005067580" maxlength="10">
+    <br><br>
+
+    <input value="Aleatorio" type="button" id="random" class="btn btn-danger">
+
+    <!--ingresar datos-->
+    <table>
+        <!--filas (tr)-->
+        <!--columnas (td)-->
+        <tr>
+            <td> <input value="1" onclick="Number(1)" type="button" id="n1" class="style"> </td>
+            <td> <input value="2" onclick="Number(2)" type="button" id="n2" class="style"> </td>
+            <td><input value="3" onclick="Number(3)" type="button" id="n3" class="style"></td>
+        </tr>
+        <tr>
+            <td> <input value="4" onclick="Number(4)" type="button" id="n4" class="style"></td>
+            <td> <input value="5" onclick="Number(5)" type="button" id="n5" class="style"></td>
+            <td> <input value="6" onclick="Number(6)" type="button" id="n6" class="style"></td>
+        </tr>
+        <tr>
+            <td> <input value="7" onclick="Number(7)" type="button" id="n7" class="style"></td>
+            <td> <input value="8" onclick="Number(8)" type="button" id="n8" class="style"></td>
+            <td> <input value="9" onclick="Number(9)" type="button" id="n9" class="style"></td>
+        </tr>
+        <tr>
+            <td> <input value="0" onclick="Number(0)" type="button" id="n0" class="style"></td>
+
+        </tr>
+    </table>
+
+    <!--RADIO BUTTONS-->
+    <div>
+        <br>
+        <input type="radio" name="color" value="azul"> Azul <br>
+        <input type="radio" name="color" value="rojo"> Rojo <br>
+        <input type="radio" name="color" value="verde"> Verde <br>
+        <input type="radio" name="color" value="amarillo"> Amarrillo <br>
+
+        <button type="button" onclick="display()"> Ejecutar </button>
+        <br>
+    </div>
+
+    <p id="demo"> </p>
+    <p id="demo1"> </p>
+    <br>
+    <p id="demo2" style="color: rgb(128, 0, 0);"> </p>
+    <br>
+    <p id="demo3"> </p>
+    <br>
+    <script>
+
+        $(document).ready(function () {
+            //alert("hola ya estoy listo");
+            console.log("listo");
+            $("#random").click(function () {
+                alert("esta es una accion del boton");
+            });
+        });
+
+        let resp = "";
+        let e = window.prompt("Ingrese su edad: ");
+        //  let ced = window.prompt("Ingrese su cedula: ");
+        //let ced = document.getElementById("ced").value;
+
+        const miEst = new est(e, ced);
+        document.getElementById("demo").innerHTML = "Edad: " + e + " por lo tanto: " + "<br>" + miEst.ingresar();
+
+        miEst.evaCedula();
+
+        document.getElementById("ced").addEventListener("change", avisoCambio);
+        document.getElementById("load", function () {
+            document.getelementById("cedV").addEventListener("keypress", soloNumeros, false);
+        });
+
+        /*
+        $("#carros").change(function () {
+            let carro = $("#carros").val();
+            alert("El carro seleccionado es: " + carro);
+        });
+        let cbCambio = document.getElementById("carros");
+        cbCambio.addEventListener("change",saludoCambio);
+            */
+        $(document).ready(function () {
+
+            $('#autos').change(function () {
+                console.log($("#autos") + val());
+            });
+        });
+    </script>
+
+    <!--funciones por div-->
+    <div id="saludo">
+        <input type="text" id="cedV" value="" maxlength="10" placeholder="# cedula">
+
+        <br>
+        <h3> Evento desde HTML</h3>
+        <br>
+        <input value="" onchange="saludoCambio();" type="text" class="style">
+        <br>
+        <input value="" id="cv" placeholder="Cedula: " onkeypress="soloNumeros();" type="text" class="style">
+
+        <!--DROPLIST-->
+        <br><br>
+        <select name="autos" id="carros">
+            <option value="chevrolet">Chevrolet</option>
+            <option value="toyota">toyota</option>
+            <option value="jettourt">Jettour</option>
+            <option value="lexus">Lexus</option>
+        </select>
+        <br>
+    </div>
+
+</body>
+
+
+</html>

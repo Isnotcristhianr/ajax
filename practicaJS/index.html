@@ -1,0 +1,97 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica JS Recalde Cristhian</title>
+</head>
+
+<body>
+    <h2>Javascript clase</h2>
+    <p>Como usar Javascript</p>
+
+    <p id="demo"></p>
+    <p id="demo2"></p>
+
+    <script>
+
+        class Car {
+            constructor(name, year, model) {
+                this.name = name;
+                this.year = year;
+                this.model = model;
+            }
+        }
+
+        //array
+        const cars = ["Toyota", "Chevrolet", "Kia"];
+
+        const myCar = new Element("Ford", 20, "SUV");
+        document.getElementById("demo").innerHTML = myCar.name + " " + myCar.year + " " + myCar.model;
+
+        document.getElementById("demo2").innerHTML=cars;
+    </script>
+</body>
+
+</html>
+-->
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Practica JS Recalde Cristhian</title>
+    </head>
+<body>
+    <h2>JavaScript Class</h2>
+    <p>Bienvenidos</p>
+
+    <p id="demo"> </p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+
+
+    <script>
+        class Car {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+        }
+
+        const myCar = new Car("Ford", 2014);
+        document.getElementById("demo").innerHTML = myCar.name + "" + myCar.year;
+
+        //array
+        const cars = ["Toyota", "Chevrolet", "Kia"]
+
+        document.getElementById("demo2").innerHTML = cars;
+
+        //array
+        const est = [];
+        est[0] = "juan";
+        est[1] = "pedro";
+        est[2] = "rosita";
+
+        document.getElementById("demo3").innerHTML = est;
+
+        //eje3
+        const number = [12, 45, 6, 35, 22];
+        let text = "";
+
+        //for echar con funtion
+        number.forEach(miFuncion);
+        //metodo
+        function miFuncion(value, index, array) {
+            text += value + "<br>";
+        }
+
+        document.getElementById("demo4").innerHTML = text;
+    </script>
+</body>
+
+</html>

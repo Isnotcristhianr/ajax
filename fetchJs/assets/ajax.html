@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API JS fetch</title>
+    <script src="assets/js/funciones.js"></script>
+    <script src="assets/js/jQueryv3.6.0.js"></script>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/stylesAjax.css">
+</head>
+
+<body>
+
+    <div class="container mt-4 shadow-lg p3 mb-5-body rounded">
+        <table class="tabke table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Username</th>
+                </tr>
+            </thead>
+            <tbody id="data">
+
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        let url = 'https://jsonplaceholder.typicode.com/users';
+
+        /*
+        //api
+        fetch(url)  
+        .then(response => response.json())
+        .then(data => mostrarData(data))
+        */
+
+        //ajax
+        $.ajax({
+            url: 'https://jsonplaceholder.typicode.com/users',
+            type: 'GET',
+            sucess: function (data) {
+                mostrarData(data);
+            }
+        });
+    </script>
+</body>
+
+</html>
